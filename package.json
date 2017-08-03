@@ -1,0 +1,24 @@
+{
+  "name": "mattermost-e2e-test",
+  "version": "0.0.1",
+  "description": "End-to-end testing for Mattermost Platform repository",
+  "main": "index.js",
+  "author": "Saturnino Abril <saturnino.abril@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "4.17.4"
+  },
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "nightwatch": "0.9.16",
+    "selenium-standalone": "6.6.0"
+  },
+  "scripts": {
+    "e2e": "./test.sh",
+    "selenium-install": "selenium-standalone install --silent",
+    "selenium-start": "selenium-standalone start -- -Djava.security.egd=file:/dev/./urandom",
+    "e2e-local": "nightwatch -e chrome --suiteRetries 1",
+    "e2e-tag": "nightwatch -e chrome --suiteRetries 1 --tag"
+  }
+}
