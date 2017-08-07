@@ -1,9 +1,9 @@
 {
-  "presets": ["es2015", "stage-0"],
-  "plugins": ["add-module-exports", "lodash"],
-  "env": {
-    "testing": {
-      "presets": []
+    "presets": ["es2015", "stage-0"],
+    "plugins": ["add-module-exports", "lodash"],
+    "env": {
+        "testing": {
+            "presets": []
+        }
     }
-  }
 }
