@@ -5,7 +5,7 @@ import {Constants} from '../../utils';
 
 module.exports = {
     '@tags': ['login'],
-    after: (client) => client.getChromeLogs().end(),
+    after: (client) => client.end(),
     'Test login page': (client) => {
         const loginPage = client.page.loginPage();
 
@@ -15,16 +15,12 @@ module.exports = {
             .assert.visible('@loginInput')
             .assert.visible('@passwordInput')
             .assert.visible('@signinButton');
-
-        // client.end();
     },
-    'Test login action with test user': (client) => {
+    'Test login action': (client) => {
         const testUser = Constants.USERS.test;
         const loginPage = client.page.loginPage();
 
         loginPage.navigate()
             .login(testUser.email, testUser.password);
-
-        // client.end();
     }
 };

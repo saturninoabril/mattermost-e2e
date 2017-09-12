@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 const Constants = {
     NIGHTWATCH_METHODS: ['tags', 'before', 'after', 'afterEach', 'beforeEach'],
-    TEST_BASE_URL: 'http://selenium.mattermost.com',
+    TEST_BASE_URL: 'localhost:8065',
     USERS: {
         admin: {
             username: 'admin',

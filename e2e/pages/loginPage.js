@@ -13,7 +13,8 @@ const loginCommands = {
             .setValue('@loginInput', email)
             .setValue('@passwordInput', pass)
             .waitForElementVisible('@signinButton')
-            .click('@signinButton');
+            .click('@signinButton')
+            .waitForElementVisible('@postTextBox', 3000);
     }
 };
 
@@ -29,6 +30,10 @@ module.exports = {
         },
         signinButton: {
             selector: 'button[type=submit]'
+        },
+        postTextBox: {
+            selector: '//*[@id="post_textbox"]',
+            locateStrategy: 'xpath'
         }
     }
 };
